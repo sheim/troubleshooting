@@ -1,0 +1,11 @@
+Calling Matlab from terminal:
+
+ matlab -nodesktop -nojvm -nosplash -nodisplay -r "myfunction(arg1,arg2); exit;" # Couldn't find the output for this...
+
+Installing Matlab.engine for python: http://www.mathworks.com/help/matlab/matlab-engine-for-python.html
+If python was installed via homebrew, you need to make sure the libpython2.7.dylib loaded by Matlab is the correct one installed by homebrew (and not the default): 
+http://www.mathworks.com/matlabcentral/answers/180518-why-does-matlab-engine-for-python-crash-when-using-a-non-system-default-version-of-python-on-mac
+
+Run this:
+
+export DYLD_LIBRARY_PATH=/usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib:$DYLD_LIBRARY_PATH python

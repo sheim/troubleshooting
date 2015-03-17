@@ -1,0 +1,12 @@
+In OS X, .DSC are frequently changed, causing git to worry.
+Fix: http://stackoverflow.com/questions/107701/how-can-i-remove-ds-store-files-from-a-git-repository
+
+1. remove current DSC:
+find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+
+2. then add to .gitignore:
+.DS_Store
+
+3. Finally, commit:
+git add .gitignore
+git commit -m '.DS_Store banished!'
