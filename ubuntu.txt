@@ -1,0 +1,3 @@
+- install gksu (for installing matlab graphically)
+- sudo apt-get install build-essential
+- http://ubuntuforums.org/showthread.php?t=2263316 # installing nvidia gtx 960 driver
